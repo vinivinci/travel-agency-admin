@@ -1,0 +1,82 @@
+.package-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px; /* Tamanho ajustado para o formulário */
+  margin: 70px auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.form-title {
+  font-size: 2rem; /* Tamanho maior para o título */
+  text-align: center;
+  color: #333;
+  font-weight: 600; /* Peso da fonte para o título */
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ececec; /* Linha abaixo do título para destaque */
+  margin-bottom: 30px; /* Espaçamento após o título */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group textarea {
+  padding: 15px;
+  border: 2px solid #ddd; /* Borda mais suave */
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Estilizar especificamente o input de arquivo para alinhamento */
+.form-group .image-upload input[type="file"] {
+  border: none;
+}
+
+.image-upload {
+  border: 2px dashed #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex; /* Flex para alinhamento interno */
+  align-items: center; /* Alinhar verticalmente */
+  justify-content: center; /* Alinhar horizontalmente */
+  gap: 15px; /* Espaço entre a imagem e o botão de upload */
+}
+
+
+.submit-button {
+  padding: 15px 30px;
+  border: 2px solid #333; /* Borda com a cor destacada */
+  background-color: transparent; 
+  color: #333; 
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-button:hover {
+  border: 2px solid #ddd;
+  background-color: #333;
+  color: #FFF; 
+}

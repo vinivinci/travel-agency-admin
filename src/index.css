@@ -1,13 +1,93 @@
+/* Typography.css */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin:0px;
 }
+
+h1, h2, h3, button {
+    font-family: 'Helvetica', sans-serif;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+:root {
+    --primary-color: #0055a5;
+    --secondary-color: #ffd700;
+    --accent-color: #f0f8ff;
+    --text-color: #333;
+    --text-color-light: #fff;
+    --bg-color: #f4f4f4;
+    --error-color: #d9534f;
+}
+
+:root {
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 64px;
+}
+/* Buttons.css */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+.create-package-button {
+    font-size: 1.125rem; /* 18px */
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    margin-bottom: var(--space-md);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.package-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+.package-modal-content {
+    background: var(--bg-color);
+    padding: var(--space-lg);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
 }

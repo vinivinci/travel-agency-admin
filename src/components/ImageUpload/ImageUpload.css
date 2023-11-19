@@ -1,0 +1,60 @@
+.image-upload  {
+  position: relative;
+  margin-right: 10px;
+   display: flex; /* Alterado para flex para organizar as imagens lado a lado */
+  flex-wrap: wrap; /* Permite que as imagens se alinhem em múltiplas linhas */
+  gap: 10px; 
+  align-items: flex-start;
+}
+
+.image-container {
+  position: relative; /* Posicionamento relativo para posicionar absolutamente o botão de fechar */
+  display: inline-block;
+}
+
+.uploaded-image {
+
+  object-fit: cover;
+  border-radius: 4px; /* Opcional: para bordas arredondadas nas imagens */
+}
+
+.remove-image {
+  position: absolute;
+  top: -10px; /* Posiciona fora da imagem */
+  right: -10px; /* Posiciona fora da imagem */
+  background-color: #333; /* Cor de fundo para o botão de fechar */
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 100%; /* Botão redondo */
+  display: none; /* Escondido por padrão */
+}
+
+.image-container:hover .remove-image {
+    background-color: #333;
+  display: block; 
+}
+
+.image-upload img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.add-image-container {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-image-button {
+  font-size: 36px; 
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
